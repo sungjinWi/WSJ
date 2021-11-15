@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            width: 140px;
+            height: 300px;
+            border: 2px solid #000000;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-around;
+            /* 중간에 빈칸 없고 꽉찬다 */
+        }
+
+        /* main container의 div 속성 */
+        #main div {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div style="background-color: coral;"></div>
+        <div style="background-color: rgb(68, 62, 59);"></div>
+        <div style="background-color: rgb(36, 184, 134);"></div>
+        <div style="background-color: rgb(60, 30, 228);"></div>
+        <div style="background-color: rgb(145, 87, 107);"></div>
+        <div style="background-color: rgb(0, 255, 64);"></div>
+    </div>
+
+    <button onclick="changeAlign()">Click me</button>
+
+    <script>
+        function changeAlign() {
+            document.getElementById("main").style.alignContent = "space-between";
+        }
+    </script>
+</body>
+</html>

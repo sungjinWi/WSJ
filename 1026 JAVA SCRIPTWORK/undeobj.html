@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined null</title>
+</head>
+<body>
+    <h1>Undefined null</h1>
+    <div id="result"></div>
+    <script>
+        var num; // 다른 언어에서는 type 나오는데 자바스크립트에서는 undefined로 나옴
+        var str = null;
+
+        document.getElementById("result").innerHTML = 
+            (typeof num) + "<br>" + (typeof str) + "<br>" + (typeof firstNum)
+    </script>
+</body>
+</html>

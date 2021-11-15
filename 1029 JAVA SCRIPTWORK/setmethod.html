@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set method</title>
+</head>
+<body>
+    <h1>Set method</h1>
+    <div id="result"></div>
+    <script>
+        
+        
+        //(1) const letters = new Set(["a", "b", "c"]);
+        // 변수는 자기가 알아볼수 있는걸로
+        
+        // (2)const letters = new Set();
+        // letters.add("a");
+        // letters.add("b");
+        // letters.add("c");
+        // letters.add("d");
+
+        // (3)const letters = new Set();  
+        // const a = "a";
+        // const b = "b";
+        // const c = "c";
+        // const d = "d";
+        // letters.add(a);
+        // letters.add(b);
+        // letters.add(c);
+        // letters.add(d);
+
+        // (4)const letters = new Set(["a", "b", "c", "d"]);
+        // letters.add("e");
+        // letters.add("f");
+
+        const letters = new Set(["a", "b", "c", "c", "c", "c"]);
+        //Set()은 중복을 제거하므로 3
+        document.getElementById("result").innerHTML = letters.size;
+
+    </script>
+</body>
+</html>

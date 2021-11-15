@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        class Car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+            present() { //method
+                return 'I have a ' + this.carname;
+            }
+        } // end of car 중괄호가 헷갈리기 떄문에 표시하는 습관을 들이자
+
+        class Model extends Car { //Model이 Car를 상속 받았다
+            constructor(brand, mod) {
+                super(brand); 
+                this.model = mod;
+            }
+
+            show() { //method
+                return this.present() + ', it is a ' + this.model; 
+            }
+        }
+
+        let myCar = new Model("Ford", "Mustang");
+        document.getElementById("result").innerHTML = myCar.show();
+
+        /* for example  보통 클래스는 대문자로 시작
+        class Vehicle {
+            constructor(name) {
+                this.name = name;
+            }
+        }
+
+        class Car extends Vehicle {
+            constructor(name, usage) {
+                super(name); // super .. Car는 Vehicle의 상속을 받아 constructor를 쓴다
+                this.usage = usage;
+            }
+        }
+
+        class Autobike extends Vehicle {
+            constructor(name, usage) {
+                super(name)
+                this.usage = usage;
+            }
+        }
+        */
+        
+    </script>
+</body>
+</html>

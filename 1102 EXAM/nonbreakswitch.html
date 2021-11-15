@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkSwitch()">Click</button>
+    <p id="result"></p>
+
+    <script>
+        function checkSwitch() {
+            let text;
+
+            switch(new Date().getDay()) {
+                case 1:
+                case 2: 
+                    text = "Today is Tuesday";
+                    // break;
+                    //@@@이 break가 없으면 default가 찍힌다@@@
+                    //여러케이스가 같은 행동을 할때 break생략해서 할 수있다
+                case 3:
+                    text = "Today is Wednseday"
+                    break;
+                default:
+                    text = "Looking forward to the Weekend!!";
+                    break;
+                case 4:                    
+                case 5:
+                    text = "Soon it is Weekend!!";
+                    break;
+                case 0:                 
+                case 6:
+                    text = "it is weekend!!"                 
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

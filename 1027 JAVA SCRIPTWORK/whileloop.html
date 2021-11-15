@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+    <h1>While loop</h1>
+    <div id="result"></div>
+    <script>
+        let text = "";
+        let i = 0;
+
+        while(i < 10){
+            // if(i%2 ==0){
+            //     text += "<br>Helloworld";
+            // }
+            // else{
+            // text += "<br>The number is " + i;
+            // }
+            
+
+            text += "<br>The number is " + i;
+            i++;
+            if(i == 5)
+                continue; //한줄만 있을 때는 중괄호 안묶고 사용 가능 i++밑에 있어야 continue 사용 가능
+            text += "<br>before continue " + i;
+        }
+        
+        document.getElementById("result").innerHTML = text;
+    </script>
+</body>
+</html>
+<!-- text += "<br>The number is  " + i; text에 "<br>The number is  " + i 추가한다는 내용
+text가 밑으로 계속 이어지게 할 수 있다.-->

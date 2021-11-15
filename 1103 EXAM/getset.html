@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Set Go</title>
+</head>
+<body>
+    <p id="result1"></p>
+    <p id="result2"></p>
+
+    <script>
+        class Car {
+            constructor(brand) {
+                this._carname = brand;
+            }
+
+            get carname() {
+                return this._carname; //_는 member property를 숨기고 쓸수 있다 capsulation
+            }
+
+            set carname(x) { //x 꼭 넣기
+                this._carname = x;
+            }
+        }
+
+        let myCar = new Car("BMW");
+        document.getElementById("result1").innerHTML = myCar.carname; //getter
+        myCar.carname = "Benz"; //setter
+        document.getElementById("result2").innerHTML = myCar.carname;
+        //property로서 사용
+
+    </script>
+</body>
+</html>

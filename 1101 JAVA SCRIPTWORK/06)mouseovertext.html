@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over me!</h1>
+    <!-- block 태그가 아니라서 옆에서 올려도 적용된다 -->
+    <script>
+        // document.getElementById("demo").onmouseover = function() {mouseOver()};
+        // document.getElementById("demo").onmouseout = function() {mouseOut()};
+        document.getElementById("demo").onmouseover = function() { document.getElementById("demo").style.color = "red";};
+        document.getElementById("demo").onmouseout = function() { document.getElementById("demo").style.color = "black";};
+        // function mouseOver() {
+        //     document.getElementById("demo").style.color = "red";
+        // }
+
+        // function mouseOut() {
+        //     document.getElementById("demo").style.color = "black";
+        // }
+    </script>
+</body>
+</html>

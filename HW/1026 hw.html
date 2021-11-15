@@ -1,0 +1,36 @@
+<!-- 
+//피보나치 수를 구하는 함수를 생성한다.
+//함수의 입력인자(parameter)는 '숫자'이다.
+//결괏값을 선언하고 초기값이 [0, 1]인 배열을 할당한다.
+//입력인자가 0인 경우(피보나치 수의 0번째 자리)와 1인 경우를 나누어 결괏값에 그 값을 할당한다
+//**피보나치 수의 계산은 2번째 자리부터, 0번째수와 1번째 수의 덧셈을 할 수 있기 때문에
+//2번째 자리부터 입력인자에 할당된 숫자까지 1씩 증가하는 반복 연산을 수행한다
+//반복이 순환될 때마다 출력되는 값을 배열인 결괏값의 마지막 요소로 추가한다.
+//결괏값을 출력한다. -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Numbers</title>
+</head>
+<body>
+    <h1>Fibonacci Numbers</h1>
+    <div id="result"></div>
+    <script>
+        function fibonacci(n) {
+        var res = [];
+        res[0] = 1;
+        res[1] = 1;
+        for(var i = 2; i < n; i++) {   
+                res[i] = res[i-2] + res[i-1];
+        }
+        return res;
+        }
+    document.getElementById("result").innerHTML = fibonacci(6).join(' ');
+    </script>
+</body>
+</html>

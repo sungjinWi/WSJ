@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+</head>
+<body>
+    <h1>연습</h1>
+    <script>
+        // var arr = [];
+        // var i = 0
+        
+        // while(i<10){
+        //     arr[i] = i;
+        //     i++;
+        // }
+
+        // document.write(arr.join("  "));
+        function makeCalendar(year, month) {
+            
+            var str = new Date(year, month-1, 1)
+            var end = new Date(year, month, 0)
+            var arr = [];
+            var i = 1;
+
+            while(i<=end.getDate()){
+            arr[i] = i;
+            i++;
+            }
+            str.getDay()
+
+
+            console.log(year + "년 " + month + "월");
+            console.log("일 월 화 수 목 금 토")
+
+            
+            document.write(str.getDay()+"<br>");
+            document.write(end.getDay()+"<br>");
+            document.write(new Date().getDate()+"<br>");
+            document.write(end.getDate()+"<br>");
+            document.write(arr.join("  "));
+        }
+
+        makeCalendar(2021, 10);
+
+    </script>
+</body>
+</html>

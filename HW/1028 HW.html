@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습이다</title>
+</head>
+
+<body>
+    <input type="number", id="input"> 
+    <button onclick="myFunction()">확인하기</button>
+    <script>
+        
+        let goal = [];
+        function random(){
+        let random1 = Math.floor(Math.random() * 9) + 1;
+        let random2 = Math.floor(Math.random() * 9) + 1;
+        let random3 = Math.floor(Math.random() * 9) + 1;
+        while (random1 == random2 || random2 == random3 || random3 == random1) {
+            random1 = Math.floor(Math.random() * 9) + 1;
+            random2 = Math.floor(Math.random() * 9) + 1;
+            random3 = Math.floor(Math.random() * 9) + 1;
+        }
+        goal = [random1.toString(), random2.toString(), random3.toString()];
+        }
+        random();
+        //중복하지 않는 랜덤 숫자 3자리 생성
+
+        function myFunction() {
+            x = document.getElementById("input").value;
+            var user = [x.toString().substring(0,1), x.toString().substring(1,2), x.toString().substring(2,3)]
+            document.write("<br>" + user);
+        }
+        
+
+        
+
+    </script>
+    <!-- 
+    1. 실행하면 랜덤 숫자를 생성한다
+    2. 입력 후 클릭하면(myFunction 함수 실행) 정답이 맞는지 확인한다
+    3.  i) 정답일 경우 homerun alert 나오고 숫자 초기화
+        ii) 정답이 아닐경우 strike, ball, out표시 후 숫자는 초기화하지않음 -->
+        
+</body>
+
+</html>

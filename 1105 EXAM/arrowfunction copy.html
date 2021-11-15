@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        var hello;
+
+        // hello = () => {
+        //     return "Hello World"
+        // }
+
+        // hello = () => {"Hello World"}
+
+        // hello = (val) => "Hello " + val; 
+
+        // hello = val => "Hello " + val;
+
+        hello = (val) => {return "Hello " + val; } //모호하게 하지말고 이렇게 하자
+
+
+        // document.getElementById("result").innerHTML = hello();
+        document.getElementById("result").innerHTML = hello("World!!!");
+    </script>
+</body>
+</html>

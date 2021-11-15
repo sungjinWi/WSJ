@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mystyle {
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            background-color: coral; 
+            color: white;
+            margin-bottom: 10px;
+            float: left;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="myFunction()">Click</button><br>
+    <div id="myDiv" class="mystyle">
+        I am DIV element
+    </div>
+    <div class="mystyle">
+        I am DIV element
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementsByTagName("DIV")[0];
+            //tagname 가져올땐 대문자
+            if(x.id === "myDiv") {
+                x.style.fontSize = "30px";
+                //이렇게 접근할땐 camel 방식으로
+            }
+        }
+    </script>
+</body>
+</html>

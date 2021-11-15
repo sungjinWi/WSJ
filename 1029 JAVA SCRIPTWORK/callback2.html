@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="userid"></div>
+    <div id="username"></div>
+    <script>
+        function findUserCallback(userid, myCallback) {
+            const user = {
+                userid: userid,
+                name: "User"+userid
+            }; //실행부 
+            // 비동기 함수 - 실행부에서 호출 결과를 기다리지 않아도 되는 함수
+            // 함수의 결괏값을 기다리지 않고 바로 실행 async , non-blocking
+            // 동기함수 예)settimeout 5000 5초 동안 막혀있다 blocking
+
+            //findUserCallback이 끝나기 전에 myCallback이 바로 실행된다
+
+            myCallback(user); //호출부
+        }
+
+            
+        findUserCallback(1, function(user) {
+            document.getElementById("userid").innerHTML = user.userid;
+            document.getElementById("username").innerHTML = user.name;
+        });
+
+        //function(user) {
+            // document.getElementById("userid").innerHTML = user.userid;
+            // document.getElementById("username").innerHTML = user.name;
+        // }
+        // call back 함수 부분
+
+        //single thread는 multi로 실행하지 못하기 때문에 바로바로 실행되어야함
+    </script>
+
+</body>
+</html>

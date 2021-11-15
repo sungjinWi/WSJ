@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        function Person(first, last, age, city) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.city = city;
+        }
+
+        const myFather = new Person("Bil", "Doe", 57, "New York"); //객체생성자 object constructor
+        const mymother = new Person("Jane", "Doe", 55, "New York");
+
+        document.getElementById("result").innerHTML = 
+            "My father is " + myFather.age + ", My mother is " + mymother.age;
+    </script>
+</body>
+</html>

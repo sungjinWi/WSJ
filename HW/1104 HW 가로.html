@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단을 외자</title>
+</head>
+<body>
+    <h1>구구단을 외자</h1>
+    <script>
+        let text = ""
+        for(let i = 1; i <= 9; i++){
+            for(let j = 1; j<=9; j++){
+                text += i +"*" + j + "=";
+                if(i*j <10) {
+                    text += " " + i*j + " ";
+                }
+                else {
+                    text += i*j + " ";
+                }
+            }
+            text += "\n";
+            text += "\n";
+        }
+        console.log(text);
+    </script>
+</body>
+</html>

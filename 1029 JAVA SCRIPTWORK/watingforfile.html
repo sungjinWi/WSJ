@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>    
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("result").innerHTML = some;
+        }
+
+        function getFile(myCallback) {
+            let req = new XMLHttpRequest(); // FTP에서 쓴다, 앱개발 등에 많이 사용
+            req.open('Get', 'mycar.html');
+            req.onload = function() {
+                if(req.status == 200) {
+                    myCallback(this.responseText);
+                } else {
+                    myCallback("Error: " +req.status);
+                }
+            }
+            req.send(); //live server에서 보내준거
+        }
+
+        getFile(myDisplayer);
+    </script>
+</body>
+</html>

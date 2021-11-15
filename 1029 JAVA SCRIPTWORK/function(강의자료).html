@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calc(a,b) {
+            let sum1 = a + b; //local variable
+            sum2 = a + b; //global variable
+                return sum1;
+        }
+        
+        // calc(20,30);
+        console.log(calc(20,30)); //이렇게 해야 console에 결과 나옴
+        console.log(sum2);
+        console.log(sum1); // sum1은 local variable이라서 function밖에서 기능못함
+    </script>
+</body>
+</html>

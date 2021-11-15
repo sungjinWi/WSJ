@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            /* table th td가 모두 solid니까 마치 두줄 그은 느낌 */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="setCaption()">Click me</button>
+    <table>
+        <caption id="myCap">Table Caption Customize</caption>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>abc.gmail.com</td>
+            <td>Argentina</td>
+        </tr>
+        <tr>
+            <td>Google</td>
+            <td>def.gmail.com</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Benz</td>
+            <td>ghi.gmail.com</td>
+            <td>Korea</td>
+        </tr>
+    </table>
+
+    <script>
+        function setCaption() {
+            document.getElementById("myCap").style.captionSide = "bottom";
+        }
+    </script>
+</body>
+</html>

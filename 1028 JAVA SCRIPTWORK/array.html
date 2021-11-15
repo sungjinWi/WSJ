@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <div id="result"></div>
+    <script>
+       const cars1 = ["BMW","Volvo", "Saab", "Fiat"] //local에서 돌아가는 메모리에 생성
+       const cars = new Array("BMW","Volvo", "Saab", "Fiat") // 메모리에 Array를 넣고 성분 넣어줌
+
+        // const cars = [];
+        // cars[0] = "BMW"
+        // cars[1] = "Volvo"
+        // cars[2] = "Saab"
+        // cars[3] = "Fiat"
+
+
+
+        document.getElementById("result").innerHTML = cars;
+        
+    </script>
+</body>
+</html>

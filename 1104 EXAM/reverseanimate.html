@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 200px;}
+        }
+        /* 모르면 다시 공부해야하는거야~~ */
+    </style>
+</head>
+<body>
+    <button onclick="myFunction()">Click me</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDiv").style.animationDirection = "reverse";
+        }
+    </script>
+    <div id="myDiv"></div>
+    <!-- 자바스크립트를 head에 넣을 경우 스크립트가 너무 크거나 url로 되있으면 body가 자바스크립트를 로딩하기전에 나타나지 않음 -->
+</body>
+</html>

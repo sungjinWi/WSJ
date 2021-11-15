@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1102 HW</title>
+</head>
+<body>
+    <h1 style="text-align: center;">1102 HW</h1>
+    <script>
+
+        
+        var i = 1;
+        var j = 1;
+        function func1() {
+            console.log("Function1");
+            while(i<=10){
+                console.log("*".repeat(i) + "\n");
+                i++;
+            }
+
+        }
+
+        function func2() {
+            console.log("Function2");
+            while(j<=10){
+                console.log("*".repeat(11-j));
+                j++;
+            }
+        }
+
+        function func3() {
+            console.log("Function3");
+            for(var k=0; k <= 10; k++) {
+                if(k<=5){
+                    console.log(" ".repeat(5-k) + "*".repeat(2*k+1))
+                }
+                else{
+                    console.log(" ".repeat(k-5) + "*".repeat(2*(10-k)+1))
+                }
+            }
+        }
+       
+        func1();
+        func2();
+        func3();
+
+        // var star1 = '';
+        // for (var i = 10; i > 0; i--) {
+        //     for (var j = 0; j < i; j++) {
+        //         star1 += '*';
+        //     }
+        //     star1 += '\n';
+
+        // }
+        // console.log(star1);
+    </script>
+</body>
+</html>
