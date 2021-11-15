@@ -48,3 +48,43 @@ DIRT 데이터가 백엔드로 왔다갔다
 
 JSON은 key : value로 되있다
 
+
+링크에서 setup
+
+공백에서 shift 오른쪽클릭 powershell
+
+nvm install lts
+
+nvm ls로 확인
+
+윈도우 오른쪽버튼 powershell 관리자
+
+nvm use 16.13.0
+
+node 설치는 관리자 모드에서 하지말고 탐색기에서 line 54 따라서
+
+nvm은 관리자에서 설치된것임
+ node권한 설정(nvm use)은 관리자에서
+
+ npm version
+ npm -v node -v
+
+NPM(node package manager)
+
+구축(integration)이 아니라 생성한다
+
+서버는 client의 요청을 받기위해 계속 listen하고 있어야한다
+
+web server의 기본포트는 80
+
+클라이언트는 80포트 지정 안해줘도 됨
+
+인스턴스는 object가 메모리에 실체화 된것 (instantiating)
+
+인스턴스는 서버 메모리에서 실행이 되고 있다
+
+listen method 8081포트로 listen중
+
+비동기라 바로 실행된다
+
+프로그래머스 들어가서 코딩 테스트 준비하기
