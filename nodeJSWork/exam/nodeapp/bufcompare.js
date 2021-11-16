@@ -14,9 +14,9 @@ console.log(x);
 
 //==================================================
 
-varbuf1 = Buffer.from('b');
-varbuf2 = Buffer.from('c');
-varbuf3 = Buffer.from('a');
+var buf1 = Buffer.from('b');
+var buf2 = Buffer.from('c');
+var buf3 = Buffer.from('a');
 var arr = [buf1, buf2, buf3];
 
 console.log(arr);
