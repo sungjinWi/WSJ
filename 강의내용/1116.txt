@@ -1,0 +1,11 @@
+자바스크립트를 node에서 쓸 수 있는것 REPL
+
+언더바는 마지막결과
+
+type pacakage.json
+
+자동완성 어케하는거지
+
+assertion 디버깅할때 값에 대한 이벨류에이션 해서 성공 못하면 멈춤
+
+.\app.js
