@@ -1,6 +1,42 @@
-콜백~~~
+콜백이 있으면 비동기
+close에선 아규먼트 없이 익셉션만 받는다
+
 if() 한줄은 {}없어도 됨
 
 creatserver는 두번 실행된다 req와 res에 대해
 
 fd는 file description
+
+
+=============================
+first in first out 
+queue
+
+diqueue 양방향에 있다
+=======================
+
+window 는 실제 사이즈가 아닌 블럭단위로 저장해서 차지하는 사이즈는 4096
+
+파일에는 파일포인터라는게 존재한다
+
+누군가가 읽으면 파일 싱크 포인트가 움직인다 (이미 오픈된 상태)
+
+position이 0이면 맨앞부터 읽고 null이면 싱크 포인터에서부터 읽는다
+
+read가 콜백에 아규먼트를 넘겨준다
+
+readfile은 오픈을 안하는데 read는 오픈해야한다
+
+간결하게 하자 if (err) {
+    return console.error(err);
+}
+
+if (err) return console.error(err);
+
+@@@@@@@로그를 잘 남겨야 어디서 오류 났는지 알 수 있다@@@@@@@@@@
+
+버퍼는 옛날 방법이라 보안이슈로 buffer.alloc 쓰라고 찍 그어져있음
+
+소켓일 때 클로즈를 안해주면 문제가 생긴다
+
+read write는 반드시 close를 해주어야한다
