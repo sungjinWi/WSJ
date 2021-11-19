@@ -1,0 +1,66 @@
+nodejs.org 문서
+
+윈도우에서는 callback abc = <function(a(주소))> (work라는 argument)
+
+=========================
+THREAD는 blocking으로 돌리고 있어도 계속 돌아갈 수 있다(별개기 때문에)
+UI만 THREAD에 해놓으면 다른 작업하고 있어도 UI는 상호작용할 수 있다
+
+nodejs는 createServer로 single thread 만들어줌
+
+
+callback function(int work)
+{
+    while(true){
+        . background(운영체제)단에 맡겨놔서 계속 루프를 돌고있다
+        .
+        .
+        event를 받는 루틴이 있어야함
+        루틴이 있으면 break
+    }
+}
+
+===============================================
+
+createthread(abc(work))
+blocking하는게 아니라 nonblocking으로 work실행
+if() {
+    .
+    .
+    .
+    .
+    특정condition --------> exit
+}
+
+critical section or resource
+멀티스레드가 공유하는 자원
+
+한 스레드가 사용할땐 lock걸고 끝나면 unlock해야 다른 스레드가 자원 사용 가능
+
+node는 thread가 아니라 task이다
+태스크는 프로세스 작업관리자에서
+task는 os에 내 프로그램 실행하겠다
+크롬 하나 켰어 그 안에서 작업하면서 창열면 작업관리자에서 자식들이 떠있다(task)
+그 태스크 안에서 싱글 스레드나 멀티스레드 돌리는것
+
+
+스레드를 열때 os에 던진다
+
+콜백은 던져놓고 기다리고 있다
+
+콜백도 사실 스레드다
+
+스레드가 생겼다 없어졌다 하는것과 마찬가지다
+
+node .\eventscream.js
+
+for each는 콜백을 걸었으니 break가 안됨
+
+for each 안에서는 동기로 열고 쓰고 닫고
+
+카피를 한다음 return false로 콜백을 나감
+
+멀티플랫폼 큐 티
+
+리눅스 계열의 이벤트 발생은 emit
+윈도우는 send message

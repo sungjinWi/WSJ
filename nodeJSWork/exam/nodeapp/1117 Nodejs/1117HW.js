@@ -29,7 +29,7 @@ fileSystem.open('1117text.txt', 'w+', (err, fd, bf) => {
         console.log("Reading 1117text.txt file!!!");
     
         fileSystem.read(fd, buf, 0, buf.length, 0, (err, bytes) => {
-        if(err) return console.error(err);
+            if(err) return console.error(err);
 
             console.log("1117text.txt reading success!!!!");
             if(bytes > 0) console.log(buf.slice(0, bytes).toString());

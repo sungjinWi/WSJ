@@ -1,0 +1,58 @@
+alloc C , C++에서도 쓴다
+
+console error를 계속 찍는 연습을 해서 오류를 체크하자
+
+node --trace-deprecation ...` to show where the warning was created)
+
+require로 가져오는 것들은 왠만하면 const로 쓰자
+
+0은 8진수를 나타내기 위해 쓰는것 777은 모든 실행권한을 갖는 것이다
+윈도우는 mode 안 쓴다
+
+path 파일명이 아니라 그냥 path (c&p하느라 잘못 적으심)
+
+in C, C++ 'a' only one "ab" string
+
+ copy ./*.txt ./temp
+
+hellodir 안에 지우고 remove 해보자 foreach로 unlink
+
+copy를 git bash에선 cp로 쓴다
+
+url path 0번째가 앞에 (3000까지) substr 1번째 : helloworld.html
+
+dir create* create 검색
+
+createServer 서버가 아닌 노드클라이언트에서의 서버를 연것
+
+Demilitarized zone
+
+switching hub
+
+client가 직접 db에 접근할수 있으면 아무나 접근할 수 있기때문에 막아놓는다
+
+data layer는 비공인 ip라 외부에서 접속하지 못한다.(DMZ는 자기만의 local network)
+
+로그인하면 미들웨어에서 로그인처리를 해줘야함
+
+createserver는 req용 res용 두번을 돈다
+
+event on('data', callback) 받아주면 emitt(data)으로 @@@@트리거@@@@할 때 이벤트 호출
+-> 연결된 callback실행
+
+db에서 insert into trigger'
+
+콜백함수가 크레잇 서버할 때 이벤트 발생한거다
+비동기라서 
+
+버튼클릭에 대한 이벤트도 뜨지만 유저 디파인드 메세지도 던져준다
+
+유저디파인드 이벤트 핸들러
+
+노드 js는 싱글스레드 스레드는 무한반복하는 루프
+
+리퀘스트할때 비동기로 처리하는 이유는 계속 웹서버에 리퀘스트가 오기 때문
+
+콜백걸어놓은게 다 이벤트야ㅑㅑㅑㅑㅑㅑㅑ 그리고 비동기로 이벤트를 기다리는것이다
+
+end하면 client로 보내준것이다
