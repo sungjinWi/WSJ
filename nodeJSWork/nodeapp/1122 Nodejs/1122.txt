@@ -1,0 +1,15 @@
+stream 물흐르듯이 받거나 보낸다
+
+오브젝트가 메모리에 적재된것이 instance
+
+flush 메모리를 disk file에 쓴다
+
+프로그램처리할때 에러처리가 어떻게 될지도 봐야한다
+
+stack, que 비교
+
+framework 뼈대
+
+middleware - business layer에 있을수 있는 애
+
+rendering - 그리는것 2d던 3d던 이미지를 화면에 그리는것
