@@ -4,7 +4,7 @@ var buf = Buffer.alloc(20480);
 var pos = 0; // file position moving check 파일을 얘기할때
 // 오프셋은 메모리를 얘기할 때
 var remainSize = 0; // remain file size
-srcFilename = '';
+var srcFileName = '';
 var destFileName = '';
 var bOpenedRead = false; //b는 불린
 var bOpenedWrite = false;
