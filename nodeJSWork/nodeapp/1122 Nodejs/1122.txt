@@ -13,3 +13,7 @@ framework 뼈대
 middleware - business layer에 있을수 있는 애
 
 rendering - 그리는것 2d던 3d던 이미지를 화면에 그리는것
+
+이미지, 동영상은 비손실 압축한다
+
+HW pos 초기화만 해주면 됨
