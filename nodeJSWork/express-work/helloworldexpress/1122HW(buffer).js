@@ -21,7 +21,7 @@ fs.readdir("./source/", (err, files) =>{
         var rfd = fs.openSync(srcFileName, 'r');
         var wfd = fs.openSync(desFileName, 'a');
         
-        pos = 0;
+        pos = 0; // 이것만 진작에 해줬어도!!!!!!!!!
         var readBytes = 0;
         while(true) {
             readBytes = fs.readSync(rfd, buf, 0, buf.length, pos);
