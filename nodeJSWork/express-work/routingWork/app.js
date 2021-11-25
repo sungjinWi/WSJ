@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-console.log
 
 const host = '127.0.0.1'; //localhost
 const port = 3000;
