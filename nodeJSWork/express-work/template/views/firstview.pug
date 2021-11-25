@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title="Hello Pug"
+        style
+            include pug.css
+        
+    body 
+        h1 hello h1!!!!
+        p.greetings#peple Hello World!!! 
+        //- .은 class고 #은 id
+
+
+        //- (style =  "background-color: blue; width : 100px; height: 100px; color:white")
+        div.container.column.main#division
+
+            | To insert multiline text,
+            br
+            | You can use the pipe operator.
+            
+
+            //- |는 이어가겠다는 뜻
