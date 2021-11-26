@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "password": "madcat",
+    "database": "NODEPOT",
+    "connectionLimit": 20
+}

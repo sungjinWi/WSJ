@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({extended: true})); 
+app.use(bodyParser.urlencoded({extended: true}));
 //true라고 하면 query String 을 qs를 쓸것이다
 
 app.use(upload.array());

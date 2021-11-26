@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
     // res.cookie(name, 'express', {expire: 360000 + Date.now()});
 });
 
+app.get('/home', (req, res) =>{
+    res.send("Cookie alive?")
+})
+
 app.get('/clear', (req, res) => {
     res.clearCookie('name', 'express');
     res.send('cookie express cleared');
