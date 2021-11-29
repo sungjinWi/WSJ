@@ -31,7 +31,9 @@ const port = 3000;
 var Users = [];
 
 app.get("/protected_page", (req, res) => {
-    res.render("protected_page");
+    res.render("protected_page", {
+        message: "Protected_page"
+    });
 });
 
 app.get('/signup', (req, res) => {
