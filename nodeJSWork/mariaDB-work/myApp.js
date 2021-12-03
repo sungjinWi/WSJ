@@ -1,3 +1,4 @@
+const { application } = require('express');
 const mysql = require('mysql');
 require('dotenv').config();
 // const dbConfig = require('./dbconfig.json');
@@ -11,6 +12,9 @@ var con = mysql.createConnection({
     database: process.env.DATABASE //mysql에서 use class4
 });
 
+
+// app.get('/', () =>{ 
+    // end까지 포함해서 쓸 것
 
 con.connect(function(err) {
     if(err) throw err;
@@ -31,4 +35,7 @@ con.connect(function(err) {
     });
 });
 
+con.end();
+
+// })
 // con.end(); //db를 닫아줌 비동기라 db만들기전에 닫아버림

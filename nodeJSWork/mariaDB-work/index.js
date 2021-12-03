@@ -46,6 +46,7 @@ app.get("/connection_pool/test", (req, res) => {
     catch(err) {
         console.error("connection_pool GET Error / "+err);
         res.status(500).send("message : Internal Server Error");
+        connection.release();
     }
 });
 
