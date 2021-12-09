@@ -1,0 +1,86 @@
+doctype html
+head(lang="ko")
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title #{title}
+  link(rel='stylesheet', href='/css/header.css', type='text/css')
+  link(rel='stylesheet', href='/css/table.css', type='text/css')
+  link(rel='stylesheet', href='/css/infoBox.css', type='text/css')
+body
+    header 
+        include ./header.pug
+
+    include ./infoBox.pug
+
+    main(style="text-align : center")
+        h1 #{title}
+        div
+            form(action='/board/update' method='post')
+                table(border='1')
+                    input(type='hidden' name='idx' value=rows.idx)
+                    tbody
+                        tr
+                            td 작성자
+                            td #{rows.userid}
+                        tr
+                            td 제목
+                            td
+                                input#title(type='text' name='title' value=rows.title required=''  style="width:99%;")
+                        tr
+                            td 내용
+                            td
+                                textarea#content(name='content' cols='30' rows='10' required='' style="width:99%; resize:none;") #{rows.content}
+                        tr
+                            td 변경일
+                            td #{rows.modidate}
+                        tr
+                            td 등록일
+                            td #{rows.regdate}
+                        tr
+                            td 조회수
+                            td #{rows.hit}
+
+                div
+                    a(href='/board/page') 목록
+            if(loginstate=='okay')
+                form(action='/board/rewrite', method='get')
+                    button(type='submit')  글 수정
+            br
+            br
+            div
+                if(loginstate=='okay')
+                    form(action="/board/comment" method = "post")
+                        input(type='hidden' name='idx' value=rows.idx)
+                        input#comment(name ="comment" type="text" required='')
+                        button(type="submit") 댓글 달기
+                if(!loginstate)
+                    
+                    input(value ="로그인 후 댓글을 달 수 있습니다" style="text-align:center; width:40%;" readonly )
+
+            div#commentlist
+                if(comrows.length>0)
+                    table(border=1)
+                        tbody
+                            td 작성자
+                            td 내용
+                            td 좋아요 수
+                            -for(var i = 0; i<comrows.length; i++)
+                                -var data = comrows[i]
+                                form(action="/board/comment" method = "put")
+                                    tr
+                                        input(type='hidden' name='comidx' value=data.idx)
+                                        td #{data.userid}
+                                        td #{data.comments}
+                                        td #{data.likecnt}
+                                        -if(id==data.userid)
+                                            td
+                                                button(type="submit") 댓글 수정
+
+                                        -if(id==data.userid)
+                                            td
+                                                form(action="/board/comment" method = "delete")
+                                                    input(type='hidden' name='comidx' value=data.idx)
+                                                    button(type="submit") 댓글 삭제
+
+                                    
