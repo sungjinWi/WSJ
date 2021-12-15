@@ -1,31 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Car from './Car'; //Car.js
+import App from '../App';
+import Car from './CarFunction'; 
 // import Gundam from './Gundam';
-import Gundam from './Gundamcopy';
-import Archangel from './Archangel';
-import Headercomp from './Headercomp';
-import Container from './Container';
-import reportWebVitals from './reportWebVitals';
+import Gundam from './GundamFunction';
+import Headercomp from '../Headercomp';
+import Container from '../Container';
+import reportWebVitals from '../reportWebVitals';
 
+//CarFunction.js
+ReactDOM.render( // virtual dom
+  <React.StrictMode>
+    <Car color="blue"/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-//Car.js
-// ReactDOM.render( // virtual dom
-//   <React.StrictMode>
-//     <Car color="blue"/>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-// Gundam.js 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Gundam model="Freedom"/>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+// GundamFunction.js 
+ReactDOM.render(
+  <React.StrictMode>
+    <Gundam camp="Earth"
+      model="X108"
+      engine="Atomic"
+      pilot="Yamato"/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 
 //app.js없이 사용; import gundam 막으셈

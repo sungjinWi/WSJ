@@ -1,0 +1,45 @@
+property가 props
+constructor 안에서 this 를 사용하기 위해서
+
+React.Component도 클래스다
+
+function 보다는 class를 권장한다!
+
+react component에선 super를 항상 써야한다
+super()는 부모의 constructor를 먼저 실행
+
+property는 index.js에서 넘겨준걸 받은것 외부에서 준것
+state는 component에 내장된 것
+
+class안에는 function을 붙이지 않는다
+
+리액트에서 component를 호출할 때 순서
+1 constructor 
+class의 생성자, instance될때 실행되서 state를 가지게 된다
+2 getDerivedStateFromProps 
+부모에서 호출 상속받을거야 (props, state) 실행 후 렌더
+3. render
+html을 DOM에 뿌려준다
+4. componentDidMount()
+렌더링 된 후에 호출
+
+constructor는 state활용 안해도 만들어주자
+
+static은 전체에서 global하게 사용하고자 할때 쓴다
+이 클래스 뿐만이 아니라 모든 애플리케이션에서 사용가능하도록 만들어진것
+안의 내용은 해당 클래스가 관리해줘~
+static이 Headercomp 안에서 선언되어있지만 선언되도 Headercomp 인스턴스가 메모리에 할당되기도 전에 정적으로 메모리에 할당이 된다 
+따라서 Headercomp에서 Headercomp라는 인스턴스를 가리키는 this로 사용할 수 없다
+
+
+
+리액트는 업데이트될 때 실행되는 5개의 method가 있다
+getDerivedStateFromProps 
+componentDidMount()
+render
+component snapshot
+그래서 setState했을 때 render시켜주는것이야
+
+reactDOM은 virtualmemory에 있는 HTML DOM같은 것이다
+
+component를 reactDOM에 올리는것을 mount component의 마운트 해제 unmount

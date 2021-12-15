@@ -12,6 +12,14 @@ import reportWebVitals from './reportWebVitals';
 //   document.getElementById('root') //index.html의 div id
 // );
 
+//Car-function
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Car color="red"/> 
+//   </React.StrictMode>,
+//   document.getElementById('root') //index.html의 div id
+// );
+
 // // If you want to start measuring performance in your app, pass a function
 // // to log results (for example: reportWebVitals(console.log))
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
