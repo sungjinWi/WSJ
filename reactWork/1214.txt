@@ -1,0 +1,37 @@
+npm install -g serve
+npx serve -s build
+npm install react-scripts@latest
+
+div id="root" 잘 기억해둬
+여러컴포넌트를 만들어나가게 되는데 create-react-app은 root안에 들어가게 약속되어있다
+
+src app.js에서 app, appheader 확인
+
+index.js에서 진입가능
+
+리액트는 메모리에 virtual DOM생성
+
+https는 보안이 강조된것
+
+min.js는 용량을 줄인것
+
+jsx javascript extention
+
+div안에도 react component를 가져다 쓸 수 있다
+
+className 은 JSX 스타일
+
+<React.StrictMode> app내에 잠재적인 문제점이 있나 확인하는 모드 Debugging을 위한 도구
+안전하지 않은 생명주기를 사용하는 컴포넌트 발견
+레거시 문자열 ref 사용에 대한 경고
+권장되지 않는 findDOMNode 사용에 대한 경고
+예상치 못한 부작용 검사
+레거시 context API 검사
+
+npm run build 해놓고 serve로 실행하면 stricmode가 비활성화 된다
+
+<></> 영역을 구분해서 fragment로 하기 위해 빈 ft html태그를 쓴것
+return 안에서 줄바꿈이 안되는데 줄바꿈을 하기위해
+
+export function 끝에 ; 붙이지 않는다 export해도 같은 함수 선언문이기 때문
+대부분 자바스크립트 스타일 가이드는 함수나 클래스 선언 끝에 세미콜론을 붙이지 말라고 권유
