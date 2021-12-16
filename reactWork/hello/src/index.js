@@ -2,82 +2,64 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Car from './Car'; //Car.js
-// import Gundam from './Gundam';
-import Gundam from './Gundamcopy';
-import Archangel from './Archangel';
-import Headercomp from './Headercomp';
-import Container from './Container';
 import reportWebVitals from './reportWebVitals';
+// import Gundam from './gd';
+// import Archangel from './GundamObject';
+// import Archangel from './ArchangelObject';
+// import Archangel from './ArchangelList';
+import Archangel from './ArchangelObjectList';
+// import Football from './Football';
+// import Goal from './Goal';
+// import Fate from './Fate';
 
 
-//Car.js
-// ReactDOM.render( // virtual dom
-//   <React.StrictMode>
-//     <Car color="blue"/>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-// Gundam.js 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Gundam model="Freedom"/>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
 
 
-//app.js없이 사용; import gundam 막으셈
-// class Gundam extends React.Component {
-//     constructor(props) {
-//         super(props);
-//     }
 
-//     render() { 
-//         return <h1>This Gundam is {this.props.model}!!!</h1>
-//     }
-// }
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Gundam />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-
-// Archangel.js
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Archangel />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-
-//Gundamcopy.js
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Gundam cargo="Archangel" />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-//Header.js
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Headercomp newTitle="New title!!!!" />
-//   </React.StrictMode>,
-//   document.getElementById('header')
-// );
-
-//Container.js
+// GundamObject.js , ArchangelObject.js , ArchangelList.js , ArchangelObjectList.js
 ReactDOM.render(
   <React.StrictMode>
-    <Container  />
+    <Archangel />
   </React.StrictMode>,
-  document.getElementById('header')
+  document.getElementById('root')
 );
+
+// gd.js
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Gundam model="ZGMF-X10A" />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+//Football.js
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Football />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+//Goal.js isGoal="false"로 하면 안됨
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Goal isGoal={true} />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+//Fate.js
+// const characters = ['siro', 'Saber', 'Archer', 'Tosaka Lyn', 'Verserker']
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Fate chracters={characters} />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
