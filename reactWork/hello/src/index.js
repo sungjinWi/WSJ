@@ -7,22 +7,22 @@ import reportWebVitals from './reportWebVitals';
 // import Archangel from './GundamObject';
 // import Archangel from './ArchangelObject';
 // import Archangel from './ArchangelList';
-import Archangel from './ArchangelObjectList';
+// import Archangel from './ArchangelObjectList';
 // import Football from './Football';
 // import Goal from './Goal';
-// import Fate from './Fate';
+import Fate from './Fate';
 
 
 
 
 
 // GundamObject.js , ArchangelObject.js , ArchangelList.js , ArchangelObjectList.js
-ReactDOM.render(
-  <React.StrictMode>
-    <Archangel />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Archangel />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // gd.js
 // ReactDOM.render(
@@ -43,20 +43,20 @@ ReactDOM.render(
 //Goal.js isGoal="false"로 하면 안됨
 // ReactDOM.render(
 //   <React.StrictMode>
-//     <Goal isGoal={true} />
+//     <Goal isGoal={false} />
 //   </React.StrictMode>,
 //   document.getElementById('root')
 // );
 
 //Fate.js
-// const characters = ['siro', 'Saber', 'Archer', 'Tosaka Lyn', 'Verserker']
+const characters = ['siro', 'Saber', 'Archer', 'Tosaka Lyn', 'Verserker']
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Fate chracters={characters} />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+  <React.StrictMode>
+    <Fate chracters={characters} />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 
 
