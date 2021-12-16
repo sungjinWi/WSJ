@@ -1,0 +1,4 @@
+<button onclick="shoot"()></button> html
+<button onClick={shoot}></button> react component
+
+list들을 렌더링할 때 loop형태로 렌더링한다
