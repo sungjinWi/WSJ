@@ -1,0 +1,7 @@
+react jsx는 javascript의 확장
+xml구문을 사용하여 가상 DOM을 만들 수 있다
+순수한 Javascript(react.createelement함수 호출)로 컴파일 된다
+javascript로 컴파일 되기 때문에 모든 유효한 javascript 코드 내에서 사용할 수 있다
+
+
+tree구조를 가지는걸 DOM이라고 한다
