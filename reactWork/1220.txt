@@ -1,0 +1,11 @@
+br도 <br />로 써야함
+div두개 할려면 <></> 빈태그로 감싸주자 short syntax
+
+react에서 fragment사용
+불필요한 DOM노드의 사용을 막기 때문에 메모리를 아낄수 있다
+
+JSX에서 class는 className으로 정해준다
+
+const Home = () =>{} 함수 이름을 안주고 콜백 함수로 만들고 바깥에 노출하는 애를 Home이라 한것?
+
+outlet을 써줘서 중첩된 내용을 가져올 수 있다
