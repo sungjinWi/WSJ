@@ -1,0 +1,40 @@
+User로 외부파일로 빼서 재사용 가능하게 만들었다
+
+key값이 없는 배열 요소 가지고 했을때는 맨 뒤에만 붙힐 수 있는데 key값이 있으면 중간에 넣을수도 있고 제거할 수도 있다
+
+... 은 멀티
+
+memo는 머여
+부모 component가 rerendering되면 자식 component 또한 rerendering된다
+실제 DOM은 변화 있는 것만 rerendering인데
+virtual DOM에서는 메모리에 다 rerendering
+
+추가되는거 하나만 rendering되는 것이다 rendering 최적화
+https://ko.reactjs.org/docs/react-api.html#reactmemo
+
+
+
+useEffect(함수,의존값이 들어있는 배열)
+배열을 빈배열 []로 주게 되면 처음 component가 나타날때만 실행
+
+[user이면] user가 마운트 될 때 언마운트 될 때 update될 때 다 실행된다
+
+[]생략하면 component가 rerendering될 때만 실행된다
+
+yarn add react-icons
+
+
+
+yarn add classnames
+
+import classNames from 'classnames/bind';
+const cx = classNames.bind(Styles);
+
+// cx('클래스이름')
+// cx('one', 'two')
+// cx('my-component', {
+//     condition: true
+// })
+// cx('my-component', ['another', 'classnames'])
+
+yarn add styled-components
