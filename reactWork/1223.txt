@@ -1,0 +1,5 @@
+ctrl + , minimap
+
+https://react.vlpt.us/mashup-todolist/
+
+https://codesandbox.io/s/mashup-todolist-fwv17?fontsize=14&file=/src/components/TodoItem.js
