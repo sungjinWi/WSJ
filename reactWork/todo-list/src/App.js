@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import {createGlobalStyle} from 'styled-components';
-import TodoTemplate from './TodoTemplate';
-import TodoHead from './TodoHead';
-import TodoList from './TodoList';
-import TodoCreate from './TodoCreate';
+import TodoTemplate from './components/TodoTemplate';
+import TodoHead from './components/TodoHead';
+import TodoList from './components/TodoList';
+import TodoCreate from './components/TodoCreate';
+import { TodoProvider } from './TodoContext';
+
+// import Reactexam from './ReduceExam';
 
 
 // function App() {
@@ -37,12 +40,15 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return(
     <>
+    <TodoProvider>
       <GlobalStyle />
-      <TodoTemplate>
-        <TodoHead />
-        <TodoList />
-        <TodoCreate />
-      </TodoTemplate>
+        <TodoTemplate>
+          <TodoHead />
+            <TodoList />
+          <TodoCreate />
+          </TodoTemplate>
+        </TodoProvider>
+      {/* <Reactexam /> */}
     </>
   )
 }

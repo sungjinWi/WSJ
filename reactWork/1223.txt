@@ -3,3 +3,27 @@ ctrl + , minimap
 https://react.vlpt.us/mashup-todolist/
 
 https://codesandbox.io/s/mashup-todolist-fwv17?fontsize=14&file=/src/components/TodoItem.js
+
+
+Reducer
+사용자가 정의한법으로 상태추적
+
+initialState는 단순한 값일수도 있지만 object를 쓴다
+
+dispatch는 reducer를 바라본다 
+reducer는 state를 변경해
+state는 dispatch를 바라본다
+
+tab
+https://tttsss77.tistory.com/63
+
+
+리덕스
+https://velopert.com/3528
+
+리액트 ... 전개연산자로 [1,2,3]이 1,2,3이 된다
+https://velog.io/@clementbwkim/ReactJS-ECMA6-%EB%AC%B8%EB%B2%95
+https://mjn5027.tistory.com/27
+
+함수에서 인자로 넘겨줄 때 인자들은 arguments라는 함수 내부의 배열로 저장된다. 
+넘어온 인자의 수를 제한하지 않거나 얼마나 받을지 예상할 수 없는 상황에는 arguments 를 사용하게 되는데 이 또한 전개 연산자로 변환이 가능하다.
