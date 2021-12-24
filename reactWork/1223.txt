@@ -27,3 +27,6 @@ https://mjn5027.tistory.com/27
 
 함수에서 인자로 넘겨줄 때 인자들은 arguments라는 함수 내부의 배열로 저장된다. 
 넘어온 인자의 수를 제한하지 않거나 얼마나 받을지 예상할 수 없는 상황에는 arguments 를 사용하게 되는데 이 또한 전개 연산자로 변환이 가능하다.
+
+usecontext
+https://xiubindev.tistory.com/105

@@ -1,0 +1,101 @@
+ctrl k f 자동 정렬 mkdir rmdir 폴더 생성 삭제
+
+단순히 global 상태관리를 위해서는 context api가 더 편리하다
+
+
+액션 개체는 필수적으로 type을 가지고 있어야한다
+
+{
+  type: "TOGGLE_VALUE"
+}
+
+액션 생성함수(Action Creater)
+export function addTodo(data) {
+  return {
+    type: "ADD_TODO",
+    data
+  };
+}
+//arrow method로 사용 가능
+export const changeInput = text => ({
+  type: "CHANGE_INPUT",
+  text
+})
+
+액션 생성함수가 필수적이지는 않다
+
+리듀서
+function reducer(state, action) {
+  //상태 업데이트 로직
+  return alteredState;
+}
+
+리듀서는 현재의 상태와 전달 받은 액션을 참고하여 새로운 상태를 만들어 반환한다
+리듀서는 useReducer를 사용할 때 작성하는 리듀서와 똑같은 형태
+
+function counter(state, action) {
+  switch (action.type) {
+    case "INCREASE" :
+    return state +1;
+    case "DECREASE" :
+    return state -1;
+    default :
+    return state;
+  }
+}
+
+useReducer에선 일반적으로 default: 부분에 throw new Error()과 같이 에러를 발생시키도록 
+처리하는게 일반적인 반면 리덕스의 리듀서에는 기존 state를 그대로 반환하도록 작성해야합니다
+
+리덕스를 사용할 때에는 여러개의 리듀서를 만들고 이를 합쳐서 루트 리듀서라 부르고
+
+===========================================
+
+Store
+!!!!리덕스에서는 한 애플리케이션당 하나의 스토어를 만들게 됩니다!!! 스토어 안에는 현재의 앱상태와 리듀서가 들어있고 추가적으로 몇가지 내장 함수들이 있습니다
+
+Dispatch
+스토어의 내장함수 중 하나입니다 액션을 발생기키는 것이라고 이해하시면 됩니다
+액션을 파라미터로 전달합니다 dispatch(action)식으로
+그렇게 호출하면 스토어는 리듀서 함수를 실행시켜 해당 액션을 처리하는 로직이 있다면 액션을 참고하여 새로운 상태를 만들어 줍니다
+
+Subscribe(구독)
+스토어 내장함수, 함수 형태의 값을 파라미터로 받아온다
+subscribe에 특정함수를 전달해주면 (callback함수) 액션이 디스패치 되었을때마다 전달해준 함수 호출된다
+리덕스에서 직접 사용할일은 별로 없다
+react-redux 라이브러리가 제공하는 connect또는 useSelector Hook을 사용하여 리덕스 스토어의 상태에 구독
+
+=================================================
+
+상태는 읽기전용이기 때문에 const로 선언해주는 것이다
+concat방식으로 update를 한다
+
+==============================================
+리덕스 3가지 규칙
+
+하나의 애플리케이션 안에는 하나의 스토어
+
+상태는 읽기전용
+
+변화를 일으키는 함수, 리듀서는 순수한 함수여야 한다
+
+========================================
+yarn add redux
+npm install react-redux 이게 더 빨라
+
+() => {}함수실행할때
+() => ({}) 안의 값을 리턴하겠다
+
+todo counter는 sub reducer
+
+패스트캠퍼스에서 강의
+
+import ./modules 로 하면 modules folder의 index.js를 임포트
+
+
+Counter redux
+https://react.vlpt.us/redux/05-counter.html
+
+redux devtool 크롬에 추가
+
+npm install redux-devtools-extension ????
