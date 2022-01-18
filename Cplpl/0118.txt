@@ -1,0 +1,9 @@
+object file은 binary file이다 컴파일은 기계어로 변환하는 과정
+
+캡슐레이션된것의 구현내용의 일부를 감춘다 
+상속이라는 개념에 의해 내려갈 때 자식에게도 구현내용을 감출 수 있다 
+데이터를 어떻게 처리하는지도 감춘다
+-> 은닉
+캡슐레이션은 외부에 감추는것
+
+polymorphism -> function 의 overloading을 통해 parameter의 argument가 다르고 return값이 다르다

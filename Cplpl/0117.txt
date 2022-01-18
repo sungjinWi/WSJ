@@ -1,0 +1,10 @@
+dev에서 cd로 폴더 들어가서 code . 으로 vscode실행해야함
+
+절차지향은 순서대로
+
+구조적 프로그래밍 = 객체지향 이라는 뜻
+
+기계어 0101110101101 Binary file
+
+C++의 실행은 main()
+main은 start-up code에 의해 실행됨
