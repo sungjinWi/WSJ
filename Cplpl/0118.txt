@@ -7,3 +7,14 @@ object file은 binary file이다 컴파일은 기계어로 변환하는 과정
 캡슐레이션은 외부에 감추는것
 
 polymorphism -> function 의 overloading을 통해 parameter의 argument가 다르고 return값이 다르다
+
+한문자(Character)는 알파벳 기준
+
+변수는 메모리의 주소를 기억하는 역할 ->> pointer
+
+C++는 내가 메모리를 직접관리해야한다
+
+ctrl shift b build
+ctrl f5 실행
+
+동일변수 한번에 선언은 같은 type으로만 가능
