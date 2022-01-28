@@ -1,0 +1,4 @@
+aquerytool.com
+aws
+ubuntu
+putty key gen

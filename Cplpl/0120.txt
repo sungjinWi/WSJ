@@ -1,0 +1,19 @@
+dir /w 가 옵션을 보여줌
+
+클래스가 intantiating이 되면 object
+
+cout도 class인데 object가 된것 <<가 operator
+
+c++은 class view에서 보면 된다
+
+main이 한 project에 두 개 있으면 안된다
+
+구분하기위해 cerr clog
+
+프로젝트 property debugging에서 command argument 주면 practice.exe 실행해도 hello world가 arg로 들어간다 ㅡ>variables_exam
+
+문자열의 끝은 항상 0이다
+
+배열 초기화 안하고 출력하면 쓰레기값이 출력된다
+
+한줄짜리는 block 안쳐도 인식된다 바로 밑에줄이나 옆줄에 바로 쳐도 됨

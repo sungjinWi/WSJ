@@ -1,0 +1,14 @@
+새프로젝트 만들기 콘솔앱
+
+set as startup project 라고 선택해주고 ctrl F5
+
+라인 왼쪽 클릭하면 breakpoint F10으로 진행가능
+
+한글은 한글자도 ""
+
+비주얼 스튜디오는 ctrl k c 만 주석
+주석 해제는 ctrl k u
+
+기억공간을 아끼기위해 character를 쓸 수 있다
+
+unsigned 는 부호 비트가 빠지기때문에 2 8승까지 표현 가능

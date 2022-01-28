@@ -1,8 +1,0 @@
-curl -X POST "http://localhost:3000/hello"
-
-router.js에선 '/'로만 정해줬지만 index.js에서 app.use('/router')를 통해 routing을 여기로 하겠다고 해준것이다
-->  localhost:3000/router 에서 get post를 할 수 있는것이다.
-
-router에서 exports해줘서 쓸수 있는것;
-
-multer 업로드

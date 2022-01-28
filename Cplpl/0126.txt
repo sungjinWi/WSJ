@@ -1,0 +1,5 @@
+중첩된 namespace를 쓰는 이유는 기능적인 구분을 하기 위해서
+
+instance : object가 memory에 적재(할당)된 것
+
+structure는 record, Class는 Object

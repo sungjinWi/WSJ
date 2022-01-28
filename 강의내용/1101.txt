@@ -1,9 +1,0 @@
-익명함수는 다 콜백 함수
-
-element node 는 tag
-
-attribute - style, backgroundColor
-
-css에서 #이 id / .이 class
-
-background-color -->>  backgroundColor  camel 형식

@@ -1,0 +1,17 @@
+보통은 선언만 .h에 있고 구현은 cpp에 있는데
+class의 구현이 같이 있는 header 파일은 hpp
+
+선언만 있다는게 prototype만 있다는 것이다
+
+return 할 때 OS가 객체 파괴자를 던져준다
+
+basic.cpp에서 prototype만 있는car.h만 include해도 car.cpp를 한번에 link해서 .exe 만들기 때문에 괜찮다
+
+한폴더에는 main()은 반드시 하나만
+
+m_ member
+
+동적할당을 해서 delete해야 훨씬 효율적이다
+
+this pointer는 해당 this를 소환한 object를 반환한다
+instance 된 자기 자신 반환
