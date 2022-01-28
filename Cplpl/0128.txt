@@ -1,1 +1,23 @@
 접근 제어 지시자는 기본적으로 private 이지만 명시해주자
+
+class는 동적할당해서 쓰는것을 버릇으로 들이자ㅏㅏ
+
+public 변수는 잘 안쓴다
+private으로 쓰고 interface로 접근
+
+
+Class inheritance
+base class - derived class
+parent class - child class
+
+const는 값을 변경할 순 없고 return 값으로만 내보내줌
+
+overriding 은 똑같아야 하는데 기능이 재정의
+
+객체 생성자와 파괴자는 public
+
+추상클래스는 인스턴시에이션 할 수 없다 == 동적할당을 할 수 없다
+
+기본틀을 정해주는것
+
+shape abstract rectangle, triangle concrete class 

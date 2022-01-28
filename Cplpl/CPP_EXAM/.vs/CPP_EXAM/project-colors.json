@@ -195,7 +195,32 @@
       "ProjectGuid": "f0eeeade-afa2-4986-ab4b-ccf7735a9ab0",
       "DisplayName": "OpenOverlaodExam",
       "ColorIndex": 5
+    },
+    "335b02da-5426-4e00-8bac-9eec3d4a9cde": {
+      "ProjectGuid": "335b02da-5426-4e00-8bac-9eec3d4a9cde",
+      "DisplayName": "AbstractDataExam",
+      "ColorIndex": 6
+    },
+    "c24c4392-fc34-491d-8eef-40540b90d3ad": {
+      "ProjectGuid": "c24c4392-fc34-491d-8eef-40540b90d3ad",
+      "DisplayName": "AbstractClassExam",
+      "ColorIndex": 7
+    },
+    "f3d1df61-2a19-4cbd-b6c8-2a1295e121a4": {
+      "ProjectGuid": "f3d1df61-2a19-4cbd-b6c8-2a1295e121a4",
+      "DisplayName": "PolyExam",
+      "ColorIndex": 8
+    },
+    "9b13d49b-a4a7-44bc-9394-e92700841885": {
+      "ProjectGuid": "9b13d49b-a4a7-44bc-9394-e92700841885",
+      "DisplayName": "StaticVariablesExam",
+      "ColorIndex": 9
+    },
+    "923dd069-2a6c-4c32-a951-57653c7ca806": {
+      "ProjectGuid": "923dd069-2a6c-4c32-a951-57653c7ca806",
+      "DisplayName": "ShapeInheritExam",
+      "ColorIndex": 10
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 11
 }
