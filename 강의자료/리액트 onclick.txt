@@ -1,0 +1,8 @@
+funtion()가 붙으면 return값이 들어간다고 보시면 되고, ()가 안 붙으면 함수 그 자체가 값으로 들어갑니다.
+
+this.onClickBtn('바위')는 함수를 실행한거라 return값을 봐야하는데 return 값도 함수인 것입니다.
+
+click e.target으로 불러오는거 name이나 value는 안됨
+id로 불러오기
+
+currentTarget을 기억했어야지 제에네장~~~~

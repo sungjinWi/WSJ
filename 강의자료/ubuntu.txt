@@ -1,0 +1,82 @@
+aquerytool.com
+aws
+ubuntu
+putty key gen
+
+AWS웹배포 
+ >> 프리티어 t2.micro 1년한정 월750시간 무료
+ >> RAM1G + 1 CPU
+  // 서버를 열어놓은 시간 기준이며, 닫아놓으면 사용안됨
+
+1. aws 계정가입 - 신용카드인증 필요(100원 출금후 반환)
+https://aws.amazon.com/ko/free
+참고 : http://aws.amazon.com/ko/ec2/pricing
+
+2. 루트사용자로 로그인
+
+3. 콘솔 > 서비스찾기 > "EC2" 검색
+
+4. 좌측하단 '프리티어'만 
+> Ubuntu 18.04LTS > t2.micro (프리티어)체크 > 다음 세부구성 > 다음 스토리지 추가 : 30Gib > 태그추가 : (구분할 이름설정) > 보안그룹  : (일단 그대로) > '검토 및 시작' > 시작하기 
+
+//보안그룹 : 서버 계속 증설시 자주사용할 설정
+
+5. 키페어 **** 
+- 새 키 페어 생성 > 이름설정  > 키페어 다운로드
+
+// 키페어를 통해서만 접속가능
+※잃어버리면 보안상 무관용 서버 폐기상황 될 수 있음..
+
+6. 인스턴스 보기
+- 퍼브릭 IPv4 DNS 확인 
+- 추가할것 : 보안그룹 > 인바운드규칙 편집 > 사용자지정TCP 포트범위 3000 설정 추가  > 0.0.0.0 저장
+// 소스0.0.0.0설정시 어디서든 접속가능 OR 특정아이피 설정시 해당IP만 접속가능
+
+7. 접속에 사용할 PUTTY 다운 및 gen
+1) putty.exe 다운
+2) putty gen 다운
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+3) generate 클릭
+4) gen 실행해서 (5번의) pem 파일 Load
+5) 우측하단 save private key 클릭하여 저장 >  test.ppk
+
+8. putty 실행 > SSH > Auth : Browse에 test.ppk불러오기
+다시 Session > HostName (aws에서 퍼브릭DNS 입력) > 하단 SaveSession에 세션명 정하고 Save
+> Open 
+
+9. Open되면 Ubuntu라고 입력후 엔터 "끝" 
+- 파일업로드 준비 완료
+
+10. NVM, nodejs 설치
+1) NVM설치 (둘중하나)
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+참고) https://github.com/nvm-sh/nvm#install--update-script
+//설정파일 리로드
+$ source ~/.bashrc
+
+2) nodejs 설치
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+// 리눅스에서는 shit + Insert가 붙여넣기이다.
+$ sudo apt-get install -y nodejs
+
+3)버전확인
+$ node -v
+$ npm -v
+
+11. 프로젝트 업로드
+1)  cd .. 엔터 > cd opt\ 엔터 > sudo mkdir myproject
+// 권한설정
+2) sudo chown ubuntu:ubuntu myproject
+//띄어쓰기 주의
+ls -al //엔터하 권한변경사항 확인
+3) cd myproject
+
+-------여기서부터 git으로 pull해와도 된다. -------
+
+
+4) sudo npm install -g express express-generator nodemon --save
+5) express
+6) ls
+7) npm start
+8) aws IPv4 DNS로 브라우저에 붙여넣고 확인

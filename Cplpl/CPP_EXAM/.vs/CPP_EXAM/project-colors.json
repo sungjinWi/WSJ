@@ -220,7 +220,47 @@
       "ProjectGuid": "923dd069-2a6c-4c32-a951-57653c7ca806",
       "DisplayName": "ShapeInheritExam",
       "ColorIndex": 10
+    },
+    "aec05ef5-19a0-4b67-ad3d-38f538f7910f": {
+      "ProjectGuid": "aec05ef5-19a0-4b67-ad3d-38f538f7910f",
+      "DisplayName": "SimpleFileIOExam",
+      "ColorIndex": 11
+    },
+    "ba71276b-685a-43a8-a335-8161cefbf159": {
+      "ProjectGuid": "ba71276b-685a-43a8-a335-8161cefbf159",
+      "DisplayName": "FileIOExam",
+      "ColorIndex": 12
+    },
+    "4e54a1ef-85f7-41af-8f19-847eb9f628d1": {
+      "ProjectGuid": "4e54a1ef-85f7-41af-8f19-847eb9f628d1",
+      "DisplayName": "filepointExam",
+      "ColorIndex": 13
+    },
+    "ad7e515c-14c7-4f6a-9c4d-f19ed8ecd5bb": {
+      "ProjectGuid": "ad7e515c-14c7-4f6a-9c4d-f19ed8ecd5bb",
+      "DisplayName": "SimpleCopyExam",
+      "ColorIndex": 14
+    },
+    "3f03f6d9-2b59-40c7-9be2-73dc7ced1623": {
+      "ProjectGuid": "3f03f6d9-2b59-40c7-9be2-73dc7ced1623",
+      "DisplayName": "FilePosExam",
+      "ColorIndex": 15
+    },
+    "2235621c-e8f9-4c73-9d7f-f9d7ad25498a": {
+      "ProjectGuid": "2235621c-e8f9-4c73-9d7f-f9d7ad25498a",
+      "DisplayName": "VerySimpleThrowExam",
+      "ColorIndex": 0
+    },
+    "b383e5c4-f01f-4874-932c-51b369427265": {
+      "ProjectGuid": "b383e5c4-f01f-4874-932c-51b369427265",
+      "DisplayName": "StdExceptionExam",
+      "ColorIndex": 1
+    },
+    "d1a4bdd4-b239-430b-831c-c75b081049e3": {
+      "ProjectGuid": "d1a4bdd4-b239-430b-831c-c75b081049e3",
+      "DisplayName": "0203HW",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 11
+  "NextColorIndex": 3
 }

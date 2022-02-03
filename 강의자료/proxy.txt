@@ -1,0 +1,22 @@
+//set proxy
+
+const {createProxyMiddleware} = require("http-proxy-middleware");
+
+module.exports = function (app) {
+    app.use(createProxyMiddleware("/api/customers",
+    {target:"http://localhost:5000"}));
+};
+
+//api 불러오는 code
+
+ callApi = async() => {
+    const response = await fetch("http://localhost:5000/api/customers");
+    const body = await response.json();
+    return body;
+  }
+
+  원래는 fetch에 그냥 "api/customers"만 넣었었는데 localhost:5000 넣으니까 되더라구요
+  저는 근데 그냥 되요...
+  setup proxy는 react 실행된 이후에는 바꿔도 영향 안끼침
+
+  여러경로는 [/api , /module]

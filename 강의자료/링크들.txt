@@ -1,0 +1,23 @@
+https://ddeck.tistory.com/29
+https://cotak.tistory.com/112
+https://veneas.tistory.com/entry/axiosjs-GET-POST-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EC%84%9C%EB%B2%84%EC%99%80-%ED%86%B5%EC%8B%A0%ED%95%98%EA%B8%B0
+https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md
+https://flutterq.com/matched-leaf-route-at-location-does-not-have-an-element/
+https://www.daleseo.com/react-router-nested/
+https://pretagteam.com/question/reactrouter-location-did-not-match-any-routes
+https://github.com/doilz/teamA/blob/main/client/src/App.js
+https://jeonghwan-kim.github.io/dev/2019/07/08/react-router-ts.html
+https://doodreamcode.tistory.com/155
+
+
+https://kyounghwan01.github.io/blog/React/image-upload/
+이미지 업로드
+https://heropy.blog/2019/02/28/blob/
+blob
+
+yarn 오래걸려서 오류뜨면
+yarn add <yourPackage> --network-timeout 100000
+
+react스타일 주는 방법
+style={{border: "none", background: "transparent"}}
+input 배경 투명하게, 테두리없음
