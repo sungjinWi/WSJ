@@ -1,0 +1,65 @@
+vi ./.vimrc에서 줄 숫자 설정
+
+====================
+
+nano 옵션 볼 수 있음
+
+dpkg -l python3
+
+================================
+
+https://docs.microsoft.com/ko-kr/windows/wsl/tutorials/gui-apps
+
+sudo apt install gedit
+
+gedit하면 ui 실행 
+
+========================================
+mv -fv *.txt ./testdir/
+이동인데 이름바꾸기 처럼 쓸 수 있다
+
+mv -fv testdir/ testfolder
+
+mv -fv testfolder/ ../testfolder
+
+mv ./testfolder/ ./work/testfolder
+
+fv쓰면 결과 보여줌
+
+======================================
+cryptozombies.io/ko/lesson
+
+git clone -b 0.15 --single-branch https://github.com/litecoin-project/litecoin litecoin-0.15
+
+=======================================
+rm
+rmdir은 빈 디렉토리만
+
+==========================================
+sudo apt install wget
+
+ps -ef | grep wget 일 때 뜨면 동작중이라는 뜻
+
+====================================
+
+echo $HOME
+
+multicmd.sh 여러개 한번에 실행가능
+
+chmod 775 ./test1.sh
+775로 실행권한주면 bash 아니라 자체적으로 실행 가능
+
+#!/bin/sh 도 실행은 된다
+
+echo -n 옵션은 줄바꿈을 뺀다
+
+=========================================
+read가 cin이다
+
+ll | grep bash
+
+=====================================
+readonly는 unset 할 수 없다
+
+terminal에서 변수 선언하면 터미널 전역 변수
+선언할 때 띄어쓰기 금지 name="sdfsdf"

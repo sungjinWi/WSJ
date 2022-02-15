@@ -1,0 +1,49 @@
+\\wsl$\Ubuntu\home\
+
+git clone -b 0.15 --single-branch https://github.com/litecoin-project/litecoin ./litecoin-0.15
+
+mv -fv ./litecoin-0.15/ ./litecoin-0.15.org
+
+cp -rfv ./litecoin-0.15.org/ ./litecoin-0.15
+
+github에서 0.15 tree doc에서 build-windows.md
+
+
+sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git
+
+sudo apt install g++-mingw-w64-x86-64
+
+sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
+
+posix 선택
+
+//윈도우와 ubuntu path  분리
+PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported
+
+cd depends
+
+make HOST=x86_64-w64-mingw32
+
+cd ..
+
+./autogen.sh
+
+CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/home/wsj/work/makecoin/litecoin_bin
+
+make
+
+make install DESTDIR=/mnt/c/workspace/litecoin
+
+bin에서 shift 오른쪽으로 파워쉘
+
+mkdir ../data
+
+dir
+
+.\litecoind.exe -datadir=c:\workspace\litecoin\data -printtoconsole
+
+다른 파워쉘
+.\litecoin-cli.exe -datadir=c:\workspace\litecoin\data getnetworkinfo
+
+// prefix뒤에 써주면 bin lib share가 다 깔린다
+// make -j -4가 더 빨리 make가 됨

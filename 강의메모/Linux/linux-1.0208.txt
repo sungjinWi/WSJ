@@ -1,0 +1,164 @@
+linux는 virtualization 켜야 윈도우에서 구동
+
+wsj 123
+
+관리자용에서
+wsl --install
+
+root 계정 설정은 난 초반에 미리함
+
+ifconfig 명령어
+
+sudo apt-get install net-tools
+
+windows
+
+복사 후 우클릭하면 붙여넣기 바로됨
+
+litecoin
+
+sudo apt update
+sudo apt upgrade
+sudo apt install build-essential libtool 
+
+sudo apt install build-essential
+gcc 설치하는게 이거 같은디???
+
+
+~는 /home/root
+
+ls -al
+
+~에서 vi ./.bashrc
+
+i눌러야 insert로 입력 가능
+#은 주석
+저장없이 탈출은 :qa!
+:qw는 저장하고 탈출
+
+drwx에서 d는 directory
+
+vi하면 생성됨
+
+g++ -o HelloWorld HelloWorld.cpp
+
+
+
+======================================
+
+
+linux에 nvm 최신버전 깔기
+
+sudo apt install curl
+
+github.com/nvm-sh/nvm
+
+curl -o- https://raw.githubusercontent.com~~
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+그대로 치고
+
+cd ~
+
+vi ./.bashrc 에서 확인
+
+source ./.bashrc 으로 바로 적용
+
+//nvm 설치확인
+nvm -v
+
+//nvm manual 확인
+nvm —help
+
+//node lts 버전 설치
+nvm install —lts
+
+//node, npm, npx설치 확인
+npm -v
+node -v
+npx -v
+
+sudo apt install mariadb-server // sudo는 관리자 권한 apt는 설치 패키지 매니저
+sudo apt install mariadb-client
+sudo mysql_secure_installation
+
+Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+sudo service mysql restart 로 오류 해결
+
+remove anonymous user y
+disallow remotely n
+remove test n
+reload previlege tables now y
+
+sudo mysql -u root -p
+
+show databases;
+
+exit 하면 나감
+
+
+============================================
+
+sudo useradd -m test
+sudo chown test.test ./HelloWorld
+
+sudo passwd test로 패스워드를 먼저 주고 옮겨간다 1234
+
+su test 가 유저 바꾸기
+
+whoami 하면 현재 유저
+
+ls -al
+
+exit하면 원래 유저
+
+=======================================
+
+sudo passwd root
+1q2w3e
+
+su - 가 root로 바꾸는거
+
+who -q
+
+=======================================
+
+sudo chmod o-x ./HelloWorld
+
+=======================================
+
+vi ~/.bashrc
+
+
+echo $PS1
+
+
+=======================================
+
+ps -ef | grep bash //가장 자주 쓰임
+
+kill -9를 많이 쓴다 sigkill(강제종료)
+
+systemctl start mariadb
+
+======================================
+
+cat HelloWorld.cpp | grep Hello
+
+=========================================================================
+
+// mac은 윈도우꺼 추가해주고
+source .zshrc 바로 적용
+
+맥은 home brew 설치 해야됨
+
+
+widow + R services.msc
+
+mariaDB 수동 하고 중지
+
+sudo 쓸 수 있게 바꾸기
+sudo dseditgroup -o edit -a john -t user admin
+sudo dseditgroup -o edit -a john -t user wheel
