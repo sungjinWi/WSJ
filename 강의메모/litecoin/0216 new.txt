@@ -1,0 +1,12 @@
+make HOST=x86_64-w64-mingw32
+
+====================================
+
+./autogen.sh
+
+CONFIG_SITE=$PWD/depends/x86_64-pc-linux-gnu/share/config.site ./configure --prefix=/
+
+depends에서 make -j 4
+
+make install destdir=
+

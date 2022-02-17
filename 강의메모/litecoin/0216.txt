@@ -1,0 +1,102 @@
+www.boost.org
+
+download
+unix
+
+tar.gz 링크 url 카피
+
+cd ~/work/
+
+wget은 미리 install
+
+wget 하고 url 붙여넣기
+
+wget https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.gz
+
+tar --version
+
+tar -zxvf ./boost_1_78_0.tar.gz
+
+cd ./boost_1_78_0
+
+./bootstrap.sh
+
+./b2 runtime-link=static toolset=gcc
+
+다시할땐
+
+./b2 -a runtime-link=static toolset=gcc
+
+cd stage cd lib
+
+cd .. cd ..
+
+sudo ./b2 install
+
+cd /usr/local/lib
+
+cd /usr/local/include
+
+ls에서 boost확인
+
+cd ~/work
+
+vi HelloWorld
+vi Makefile
+
+make
+
+======================================
+build-unix..md
+
+build requirements
+
+boost 빼고 할것
+
+minipunk랑 libz
+
+qt5 qrencode
+
+==================================
+berkeley DB 는 build에서 설치
+
+cd ~/work
+
+wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
+
+tar -xvf ./db-4.8.30.NC.tar.gz
+
+sed -i 's/__atomic_compare_exchange/__atomic_compare_exchange_db/g' db-4.8.30.NC/dbinc/atomic.h
+
+cd db-4.8.30.NC/
+
+cd build_unix
+
+../dist/configure --disable-shared --enable-cxx --with-pic --prefix=/usr/local
+
+make -j 4
+
+sudo make install
+
+cd /usr/local/lib
+
+libdb 확인
+
+cd litecoin
+
+pwd
+
+./autogen.sh
+
+./configure --prefix=/
+
+make
+
+//sudo apt purge dependency도 같이 삭제 사용법은 검색해볼것
+
+//rm -rfv ./litecoin
+
+
+
+
+

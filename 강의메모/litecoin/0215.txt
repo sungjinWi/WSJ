@@ -34,7 +34,7 @@ make
 
 make install DESTDIR=/mnt/c/workspace/litecoin
 
-bin에서 shift 오른쪽으로 파워쉘
+c/workspace/litecoin/bin에서 shift 우클릭으로 파워쉘켜기
 
 mkdir ../data
 

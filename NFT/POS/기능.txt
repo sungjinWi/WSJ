@@ -1,0 +1,10 @@
+desktop wheat noodle feature manual donate vacuum office echo decide alert radar fabric
+
+게시판 좋아요 및 댓글 수
+마이페이지에서 좋아요한 게시글
+댓글 수정삭제
+머릿말로 작성밑 검색
+
+yarn global add serve
+  serve -s build
+
