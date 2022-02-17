@@ -28,7 +28,7 @@ className 은 JSX 스타일
 예상치 못한 부작용 검사
 레거시 context API 검사
 
-npm run build 해놓고 serve로 실행하면 stricmode가 비활성화 된다
+npm run build 해놓고 serve로 실행하면 strictmode가 비활성화 된다
 
 <></> 영역을 구분해서 fragment로 하기 위해 빈 ft html태그를 쓴것
 return 안에서 줄바꿈이 안되는데 줄바꿈을 하기위해

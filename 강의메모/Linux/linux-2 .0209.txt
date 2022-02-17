@@ -1,5 +1,13 @@
 vi ./.vimrc에서 줄 숫자 설정
 
+set number "line 표시
+syntax on " 문법 하이라이트 on
+filetype indent on " 파일 종류에 따른 구문 강조
+set mouse-a " 커서 이동을 마우스로 가능하도록
+set tabstop=4 " tab을 4칸 공백으로
+set shiftwidth=4 " 들여쓰기를 4칸 공백으로
+
+
 ====================
 
 nano 옵션 볼 수 있음
