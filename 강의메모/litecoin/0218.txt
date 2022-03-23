@@ -1,0 +1,7 @@
+https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/
+8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc
+
+
+qt에러
+qt.mk
+https://download.qt.io/new_archive/qt/5.7/5.7.1/

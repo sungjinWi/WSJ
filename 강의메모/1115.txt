@@ -67,7 +67,8 @@ nvm은 관리자에서 설치된것임
  node권한 설정(nvm use)은 관리자에서
 
  npm version
- npm -v node -v
+ npm -v 
+ node -v
 
 NPM(node package manager)
 

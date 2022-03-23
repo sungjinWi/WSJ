@@ -73,7 +73,7 @@ nvm -v
 nvm —help
 
 //node lts 버전 설치
-nvm install —lts
+nvm install --lts
 
 //node, npm, npx설치 확인
 npm -v

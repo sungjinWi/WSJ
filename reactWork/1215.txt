@@ -3,8 +3,6 @@ constructor 안에서 this 를 사용하기 위해서
 
 React.Component도 클래스다
 
-function 보다는 class를 권장한다!
-
 react component에선 super를 항상 써야한다
 super()는 부모의 constructor를 먼저 실행
 

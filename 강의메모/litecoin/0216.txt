@@ -47,7 +47,7 @@ vi Makefile
 make
 
 ======================================
-build-unix..md
+build-unix.md
 
 build requirements
 
