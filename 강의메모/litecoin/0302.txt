@@ -1,0 +1,92 @@
+alt + shift + drag
+
+================================
+sudo apt update
+sudo apt upgrade
+sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git
+gcc --version
+sudo apt install g++-mingw-w64-x86-64
+sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
+1번 선택
+공유폴더 windowbin 다운받기
+c/work에 넣고 압축풀기
+
+==========================
+노드 설치
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+vi ~/.bashrc 로 마지막에 들어갔는지 확인
+
+source ~/.bashrc
+
+nvm install --lts 로 npm 설치
+==========================
+네트워크 연결
+
+윈도우 R cmd키고
+
+ipconfig 
+에서 무선 lan 어댑터 ipv4주소 가 내 주소
+
+방화벽 고급설정에서 인바운드 - 파일 및 프린터 공유 전부 허용으로 규칙사용
+
+인바운드 규칙 추가
+
+포트
+
+특정 로컬모드 9777, 9776
+
+연결허용
+
+전체 체크
+
+이름 kigacoin_port
+
+==================
+rpc user는 daemon에 접근하는 user
+나 자신은 주석으로해서 conf 수정
+
+win_bin에서 powershell열기
+
+cd bin
+
+dir 로 qt.exe확인
+
+cd..
+
+mkdir data
+
+cd bin
+
+dir
+
+.\kigacoin-qt.exe -conf=C:\work\kigacoin_win_bin\kigacoin.conf -datadir=C:\work\kigacoin_win_bin\data
+
+실행되면 도움말에 디버그 창에서 피어 본다
+
+콘솔에서 getnewaddress wsj
+
+KKscy4EwxeYoZmxzvA3UwMYd5SfoZd6KaZ
+
+generatetoaddress 10 KKscy4EwxeYoZmxzvA3UwMYd5SfoZd6KaZ
+
+gettransaction 거래ID
+
+sudo apt install net-tools
+
+ifconfig
+
+daemon_start.bat
+.\kigacoind.exe -conf=C:\work\kigacoin_win_bin\kigacoin.conf -datadir=C:\work\kigacoin_win_bin\data -printtoconsole
+
+daemon_stop.bat
+.\kigacoin-cli.exe -conf=C:\work\kigacoin_win_bin\kigacoin.conf -datadir=C:\work\kigacoin_win_bin\data stop
+
+mining_start.bat
+@echo off 하면 goto start 안보임
+:start
+.\kigacoin-cli.exe -conf=C:\work\kigacoin_win_bin\kigacoin.conf -datadir=C:\work\kigacoin_win_bin\data generatetoaddress 1 KKscy4EwxeYoZmxzvA3UwMYd5SfoZd6KaZ
+goto start
+
+=================
+curl --user thpark:1234 --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getnetworkinfo", "params": []}' -H 'content-type: text/plain;' http://127.0.0.1:9776/

@@ -1,0 +1,86 @@
+구글 드라이브 kigacoinhash 참고해서
+createGenesisBlock 바꾸기
+
+50줄 쯤
+parseHex 안쪽 지우고 pubkey
+
+pszTimestamp는 보통 그날의 headline 90바이트 넘으면 안된다
+
+121쯤
+
+첫번째가 time 두번쨰 nonce 세번째 bit
+
+merkle hash가 merkle root에 들어가는데 앞에 @@@@@@0x@@@@@@가 있어야함
+genesishash도 바꿔준다
+
+testnet바꾸기
+220쯤
+
+
+======================================
+
+83
+
+nPowTargetTimespan 난이도조정 
+targetspacing
+
+비트코인하고 기간을 맞추려면 발행량과 위 두개 배율을 맞추면된다
+
+amount.h에서 총 발행량 확인
+
+halving이 반감
+
+halving interval 반감기 총발행량의 1/100
+
+=============================
+127~ 131 233~235 주석
+
+
+vSeeds.clear();
+vSeeds.emplace_back("", true);
+
+
+====================================
+contrib\seeds\README.md
+
+터미널 contrib/seeds/ 에서
+
+
+=================================
+104번째줄 chainwork 0x 0 64개 (메인넷)
+213번째줄 0x 0 64개 (테스트넷)
+
+==================================
+https://blockchair.com/bitcoin-cash/blocks
+
+150번째줄 해당블록주소 검증하는것
+0번째 genesis블록 검증해보기 하자
+나머지는 주석
+
+코인만들면 중간중간에 검증 소스코드에 해쉬주소 확인해서 넣어주면 된다
+
+170번째줄 chaintxdata
+timestamp는 우리꺼
+total은 0
+남은 timestamp 0.00
+
+255번째줄
+테스트넷도 수정
+
+==================================
+src/qt/res/icons 에서 png바꿔서 logo를 바꾼다
+litecoin_splash를 kigacoin_splash로 바꾼다
+
+====================================
+/doc/man
+litecoin -> kigacoin
+
+=====================
+/test/functional/test_framework/mininode.py
+
+37번째줄 kigacoin->litecoin
+
+=======================
+/.travis.yml 테스트넷용이다
+23 28 30 32 34 36번째줄 KIGACOIN_SCRYPT -> LITECOIN_SCRYPT
+

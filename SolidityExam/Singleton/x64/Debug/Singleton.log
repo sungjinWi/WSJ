@@ -1,0 +1,5 @@
+﻿  main.cpp
+c1xx : fatal error C1083: 소스 파일을 열 수 없습니다. '..\..\sd\main.cpp': No such file or directory
+  Singleton.cpp
+D:\Coding\WSJ\SolidityExam\Singleton\Singleton.cpp(1,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'Singleton.h': No such file or directory
+  코드를 생성하고 있습니다...

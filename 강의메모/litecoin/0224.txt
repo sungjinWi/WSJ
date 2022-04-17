@@ -1,0 +1,55 @@
+mingw가 gcc이용해서 exe만들어준다
+
+sudo apt install nsis
+
+sudo apt install g++-mingw-w64-x86-64
+
+sudo update-alternatives --config x86_64-w64-mingw32-g++
+
+PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g')
+
+
+sudo bash -c "echo 0 > /proc/sys/fs/binfmt_misc/status"
+
+cd depends
+
+make HOST=x86_64-w64-mingw32 -j 4 #exe파일 빌드
+
+cd ..
+
+./autogen.sh
+
+CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/ #make파일 만들어주는것
+
+make -j 8 # 8개를 한번에 빌드하는것
+
+src와 qt에 exe생겼을것
+
+sudo bash -c "echo 1 > /proc/sys/fs/binfmt_misc/status" # Enable WSL support for Win32 applications
+
+make install DESTDIR=~/work/makecoin/kigacoin_bin
+make install DESTDIR=/mnt/d/workspace/kigacoin_win_bin
+
+make deploy
+
+install 된곳 가서 share/man/man1가면 manual볼수 있음
+
+=============================================
+cp -rfv ./kigacoin_org/ ./kigacoin_ubuntu
+
+원래는 다 dependency 설치하고 autogen하는게 맞는데 dependency가 depends에 있으니 
+
+cd depends에서 make -j 4하면 알아서 받아와서 make할거여
+
+
+PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') 해줘야함
+
+cd ..
+
+./autogen.sh
+
+CONFIG_SITE=$PWD/depends/x86_64-pc-linux-gnu/share/config.site ./configure --prefix=/
+
+make -j 4
+
+make install DESTDIR=~/work/makecoin/kigacoin_ubuntu_bin

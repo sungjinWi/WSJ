@@ -1,0 +1,10 @@
+https://www.unixtimestamp.com/ 에서 변환
+
+sudo python2 get-pip.py
+
+@@@@@sudo apt-get install build-essential libssl-dev python-dev@@@@@
+
+sudo pip install scrypt construct==2.5.2
+
+
+python2 genesis.py -a scrypt -z "KGA Blockchain Class 4th Start At 18/Oct/2021" -t 1617604141

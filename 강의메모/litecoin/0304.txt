@@ -1,0 +1,29 @@
+git clone -b {branch_name} --single-branch {저장소 URL}
+
+주소는 localhost:3000/api/v2/basicapi
+localhost:3000/api/v2/basicapi/ id번호
+
+header 
+Content-type  application/json
+
+
+{
+        "name": "The first task",
+        "description": "This is the first task",
+        "website": "https://google.com",
+        "phone": "(111) 111-1111",
+        "email": "enroll@gmail.com",
+        "address": "233 Baker Street 221B",
+        "location": {
+            "lat": 51.75,
+            "lng": -1.25
+        },
+        "career": "Software Engineer",
+        "housing": true,
+        "jobAssistance": true,
+        "jobGuarantee": false,
+        "acceptGi": true,
+        "hello": "world"
+}
+
+이름 웹사이트 이메일 바꾸기

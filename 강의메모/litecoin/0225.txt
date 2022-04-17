@@ -1,0 +1,69 @@
+윈도우 wsl은 exe만든곳에서(kigacoin_bin)
+
+mkdir data
+
+해당 폴더 탐색기에서 shift 우클릭
+.\kigacoin-qt.exe -datadir=D:\workspace\kigacoin_win_bin\data
+ 실행(.exe 빼먹지 말것)
+
+
+help->
+debug window -> 
+console
+getnetworkinfo 입력
+
+
+==========================================
+통신해보자
+
+// https://litecoin.info/index.php/Litecoin_API
+
+https://developer.bitcoin.org/reference/rpc/index.html
+에서 getnetworkinfo
+
+getnewaddress wsj //address생성
+
+help getnewaddress 하면 도움 준다
+
+getaccount
+
+listaccounts
+
+getaddressesbyaccount wsj
+
+sendtoaddress
+
+generatetoaddress 10 KLcRGwv7oDnouMMwBttp47FSmiC7aCRJkk// 그 address에 block mining
+
+generate 10 채굴
+
+consensus/consensus.h 에서 coinbase matuality 10으로 바꾸면 10개 채굴해도 코인사용가능
+
+getblockhash 0 // genesis block hash
+
+getblock de0bc9e62461efb7cb25b3dfadef8e3b9d032872b04d99bf121793691774161d //genesisblock 정보
+
+block explorer를 거래소와 함께 만드는걸 잊지마라
+
+==================================================
+network
+
+makecoin/kigacoin_api_exam
+
+npm init index.js 에서 app.js 
+
+npm install express
+npm install dotenv
+npm install request
+npm install pug
+npm install body-parser  -> express는 내장되있으니 express로 해보자 (https://calvinjmkim.tistory.com/57)
+npm install babel-types
+
+kigacoin.conf makecoin에서
+cp -fv ./kigacoin.conf /mnt/d/workspace/kigacoin_win_bin
+
+rpcuser는 데몬을 실행해서 rpc통신할 user 설정
+
+allowip는 내가 같이 통신할 ip들
+
+curl은 ubuntu에서만
